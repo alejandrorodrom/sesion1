@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
   // styles: ['']
 })
 export class XyzComponent implements OnInit, OnDestroy {
+
+  name = 'Galaxy Training';
+
+  imagen = 'https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hotel-at-img-academy.jpg';
 
   constructor(
     private router: Router

@@ -1,5 +1,14 @@
 <p>Pagina 1</p>
 
-<p>Alejandro Rodriguez</p>
+<p>{{ name }}</p>
+
+<img [src]="imagen">
+
+<br>
+<hr>
+
+<input type="text" [(ngModel)]="name">
+
+<br>
 
 <button (click)="goPage2()">Cambiar pagina</button>
