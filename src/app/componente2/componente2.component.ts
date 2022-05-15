@@ -14,7 +14,7 @@ export class Componente2Component implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    console.log('Se inicio componente 3');
+    console.log('Se destruye componente 2');
   }
 
 }
