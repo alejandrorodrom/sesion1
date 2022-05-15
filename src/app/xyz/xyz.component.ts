@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-xyz',
@@ -9,7 +10,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class XyzComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     console.log('Se inicio componente');
@@ -17,6 +20,10 @@ export class XyzComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     console.log('Se destruyo componente');
+  }
+
+  goPage2(): void {
+    this.router.navigateByUrl('componente2');
   }
 
 }
