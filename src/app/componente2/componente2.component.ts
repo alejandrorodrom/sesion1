@@ -7,6 +7,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class Componente2Component implements OnInit, OnDestroy {
 
+  nombre = 'Alejandro Rodriguez';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +17,10 @@ export class Componente2Component implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     console.log('Se destruye componente 2');
+  }
+
+  imprimir(evento: number): void {
+    console.log(evento);
   }
 
 }

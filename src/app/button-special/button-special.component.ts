@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-special',
@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonSpecialComponent implements OnInit {
 
-  name: string = 'Defecto';
+  @Input() name: string = 'Defecto';
+
+  edad = 50;
+
+  @Output() special = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  seHizoClick(): void {
+    this.special.emit(this.edad);
   }
 
 }
