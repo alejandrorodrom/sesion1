@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { LogsService } from '../services/logs.service';
 
 @Component({
   selector: 'app-componente2',
@@ -9,7 +10,9 @@ export class Componente2Component implements OnInit, OnDestroy {
 
   nombre = 'Alejandro Rodriguez';
 
-  constructor() { }
+  constructor(
+    private logService: LogsService
+  ) { }
 
   ngOnInit(): void {
     console.log('Se inicio componente 2')
@@ -21,6 +24,14 @@ export class Componente2Component implements OnInit, OnDestroy {
 
   imprimir(evento: number): void {
     console.log(evento);
+  }
+
+  emitirLog(): void {
+    this.logService.saveLogs('LOG: SE EJECUTO CORRECTAMENTE');
+  }
+
+  mostrar(): void {
+    this.logService.showLogs();
   }
 
 }
