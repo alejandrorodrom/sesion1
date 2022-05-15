@@ -2,10 +2,19 @@
 
 <p>{{ name }}</p>
 
-<img [src]="imagen">
+<!--<img [src]="imagen" [ngStyle]="{-->
+<!--  'height': success ? 'green' : 'red',-->
+<!--  'width': '100px'-->
+<!--}">-->
+
+<img [src]="imagen" [ngClass]="{'imagen': success}">
+
+<button [ngStyle]="{ 'display': success ? 'block' : 'none' }">Conectado</button>
 
 <br>
 <hr>
+
+<input type="text" [(ngModel)]="name" disabled>
 
 <input type="text" [(ngModel)]="name">
 

@@ -12,6 +12,8 @@ export class XyzComponent implements OnInit, OnDestroy {
 
   name = 'Galaxy Training';
 
+  success = true;
+
   imagen = 'https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hotel-at-img-academy.jpg';
 
   constructor(

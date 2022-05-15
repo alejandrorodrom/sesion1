@@ -1,0 +1,8 @@
+.imagen {
+  height: 100px;
+  width: 100px;
+}
+
+.cuadrado {
+  border: 1px solid red;
+}
