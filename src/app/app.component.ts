@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sesion-1';
+
+  constructor() {
+  }
+
+  method(): void {
+    console.log('');
+  }
 }
